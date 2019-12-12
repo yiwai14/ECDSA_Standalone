@@ -2,7 +2,7 @@ package org.yotaro.authentiction.authenticator;
 
 import java.math.BigInteger;
 
-public class ECDSASignature{
+public class ECDSAValidation{
 
     //prime256v1 parameter
     BigInteger a	= new BigInteger("FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC" ,16);
@@ -12,9 +12,10 @@ public class ECDSASignature{
     BigInteger Gx	= new BigInteger("6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296" ,16);
     BigInteger Gy	= new BigInteger("4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5" ,16);
 
-    private String message;
+    public ECDSAValidation(){
+    }
 
-    public ECDSASignature(String message){
-        this.message = message;
+    public boolean validate(BigInteger R_value, BigInteger S_value){
+        return R_value == S_value;
     }
 }
