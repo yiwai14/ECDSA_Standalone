@@ -5,18 +5,6 @@ import java.math.BigInteger;
 import java.security.*;
 
 public class Main {
-    //prime256r1 parameter
-    private static final BigInteger a	= new BigInteger("FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFC" ,16);
-    private static final BigInteger b	= new BigInteger("5AC635D8AA3A93E7B3EBBD55769886BC651D06B0CC53B0F63BCE3C3E27D2604B" ,16);
-    private static final BigInteger q	= new BigInteger("FFFFFFFF00000001000000000000000000000000FFFFFFFFFFFFFFFFFFFFFFFF" ,16);
-    private static final BigInteger l	= new BigInteger("FFFFFFFF00000000FFFFFFFFFFFFFFFFBCE6FAADA7179E84F3B9CAC2FC632551" ,16);
-    private static final BigInteger Gx	= new BigInteger("6B17D1F2E12C4247F8BCE6E563A440F277037D812DEB33A0F4A13945D898C296" ,16);
-    private static final BigInteger Gy	= new BigInteger("4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5" ,16);
-
-    //original key
-    private static final BigInteger X	= new BigInteger("95FEF3B589EC6875F6CA21C999E1C5979760D39CB86BF843EF0C2E07B8524699" ,16);
-    private static final BigInteger Yx	= new BigInteger("8a47399ba0b6c6d0d679e01e4f5f161253b7ef3bc53b3f29e2402586f8081cdd" ,16);
-    private static final BigInteger Yy	= new BigInteger("b75c80a53444a029598b8124aad9ab2a8b076b5396076dc1c592074004cd523c" ,16);
 
     public static void main(String[] args) throws NoSuchProviderException, NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, SignatureException {
 
@@ -43,11 +31,11 @@ public class Main {
 
         //著名生成
         ECDSASignature ecdsaSignature = new ECDSASignature("Hello World", privateKey);
-        BigInteger[] RS = ecdsaSignature.signature();
+        byte[] sign = ecdsaSignature.signature();
 
         //著名検証
-        ECDSAValidation validation = new ECDSAValidation();
-        System.out.println(validation.validate(a, b));
+        ECDSAValidation ecdsaValidation = new ECDSAValidation("Hello World", publicKey);
+        System.out.println(ecdsaValidation.validate(sign));
     }
 
 

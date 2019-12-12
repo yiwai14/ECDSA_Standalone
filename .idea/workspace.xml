@@ -3,7 +3,12 @@
   <component name="ChangeListManager">
     <list default="true" id="5d59cc85-802b-452a-bf79-4392f7f4e7f6" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ECDSA/org/yotaro/authentiction/authenticator/ECDSASignature.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ECDSA/org/yotaro/authentiction/authenticator/ECDSASignature.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ECDSA/org/yotaro/authentiction/authenticator/ECDSAValidation.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ECDSA/org/yotaro/authentiction/authenticator/ECDSAValidation.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/out/production/ECDSA/org/yotaro/authentiction/authenticator/Main.class" beforeDir="false" afterPath="$PROJECT_DIR$/out/production/ECDSA/org/yotaro/authentiction/authenticator/Main.class" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/org/yotaro/authentiction/authenticator/ECDSASignature.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/yotaro/authentiction/authenticator/ECDSASignature.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/yotaro/authentiction/authenticator/ECDSAValidation.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/yotaro/authentiction/authenticator/ECDSAValidation.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/org/yotaro/authentiction/authenticator/Main.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/org/yotaro/authentiction/authenticator/Main.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,7 +72,7 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1576049765623</updated>
-      <workItem from="1576049767042" duration="12124000" />
+      <workItem from="1576049767042" duration="12609000" />
     </task>
     <servers />
   </component>
@@ -75,22 +80,22 @@
     <option name="version" value="1" />
   </component>
   <component name="WindowStateProjectService">
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1576138020393">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom" timestamp="1576138457034">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138020393" />
-    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1576138020392">
+    <state width="1638" height="295" key="GridCell.Tab.0.bottom/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138457034" />
+    <state width="1638" height="295" key="GridCell.Tab.0.center" timestamp="1576138457033">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.center/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138020392" />
-    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1576138020391">
+    <state width="1638" height="295" key="GridCell.Tab.0.center/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138457033" />
+    <state width="1638" height="295" key="GridCell.Tab.0.left" timestamp="1576138457032">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.left/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138020391" />
-    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1576138020393">
+    <state width="1638" height="295" key="GridCell.Tab.0.left/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138457032" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right" timestamp="1576138457034">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state width="1638" height="295" key="GridCell.Tab.0.right/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138020393" />
+    <state width="1638" height="295" key="GridCell.Tab.0.right/0.-900.1600.900/0.0.1680.1050@0.0.1680.1050" timestamp="1576138457034" />
     <state x="349" y="164" key="SettingsEditor" timestamp="1576132231177">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
