@@ -1,6 +1,8 @@
 package org.yotaro.authentiction.authenticator;
 
 import java.math.BigInteger;
+import java.security.*;
+import java.security.spec.ECGenParameterSpec;
 
 public class ECDSASignature{
 
@@ -13,8 +15,21 @@ public class ECDSASignature{
     BigInteger Gy	= new BigInteger("4FE342E2FE1A7F9B8EE7EB4A7C0F9E162BCE33576B315ECECBB6406837BF51F5" ,16);
 
     private String message;
+    private PrivateKey privateKey;
 
-    public ECDSASignature(String message){
+    public ECDSASignature(String message, PrivateKey privateKey){
         this.message = message;
+        this.privateKey = privateKey;
     }
+
+    public BigInteger[] signature(){
+        BigInteger[] RS = new BigInteger[2];
+
+
+
+
+        return RS;
+    }
+
+    //BigInteger R_value = Yy;
 }

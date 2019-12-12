@@ -18,4 +18,14 @@ public class ECDSAValidation{
     public boolean validate(BigInteger R_value, BigInteger S_value){
         return R_value == S_value;
     }
+
+    //secret key X (256bit 77 digits radmon number)
+
+    //public key Y(coordivate so Yx and Yy)
+
+    //temp secret key for sign: q
+
+    //transaction data hash: h
+
+    //sender secret key: k
 }
