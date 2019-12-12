@@ -1,8 +1,9 @@
 package org.yotaro.authentiction.authenticator;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.*;
-import java.security.spec.ECGenParameterSpec;
+
 
 public class ECDSASignature{
 
@@ -22,8 +23,27 @@ public class ECDSASignature{
         this.privateKey = privateKey;
     }
 
-    public BigInteger[] signature(){
+    public BigInteger[] signature() throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
         BigInteger[] RS = new BigInteger[2];
+
+        //著名生成アルゴリズム指定
+        Signature ecdsa = Signature.getInstance("SHA256withECDSA");
+
+        //初期化
+        ecdsa.initSign(privateKey);
+
+        //著名生成
+        ecdsa.update(message.getBytes("UTF-8"));
+
+        //著名を取り出す
+        byte[] sign = ecdsa.sign();
+
+        System.out.println("Signature: " + DatatypeConverter.printHexBinary(sign));
+
+
+
+
+
 
 
 

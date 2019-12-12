@@ -1,5 +1,6 @@
 package org.yotaro.authentiction.authenticator;
 
+import java.io.UnsupportedEncodingException;
 import java.math.BigInteger;
 import java.security.*;
 
@@ -17,7 +18,7 @@ public class Main {
     private static final BigInteger Yx	= new BigInteger("8a47399ba0b6c6d0d679e01e4f5f161253b7ef3bc53b3f29e2402586f8081cdd" ,16);
     private static final BigInteger Yy	= new BigInteger("b75c80a53444a029598b8124aad9ab2a8b076b5396076dc1c592074004cd523c" ,16);
 
-    public static void main(String[] args) throws NoSuchProviderException, NoSuchAlgorithmException {
+    public static void main(String[] args) throws NoSuchProviderException, NoSuchAlgorithmException, UnsupportedEncodingException, InvalidKeyException, SignatureException {
 
         //鍵ペア生成機
         KeyPairGenerator kpg;
@@ -38,7 +39,7 @@ public class Main {
 
         //秘密鍵
         PrivateKey privateKey = keyPair.getPrivate();
-        System.out.println("private key: " + privateKey.getEncoded());
+        System.out.println("private key: " + privateKey);
 
         //著名生成
         ECDSASignature ecdsaSignature = new ECDSASignature("Hello World", privateKey);
