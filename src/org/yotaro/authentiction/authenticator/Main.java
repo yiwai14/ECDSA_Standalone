@@ -29,12 +29,30 @@ public class Main {
         PrivateKey privateKey = keyPair.getPrivate();
         System.out.println("private key: " + privateKey);
 
-        //著名生成
-        ECDSASignature ecdsaSignature = new ECDSASignature("Hello World", privateKey);
-        byte[] sign = ecdsaSignature.signature();
+        String message = "Hello World";
 
-        //著名検証
-        ECDSAValidation ecdsaValidation = new ECDSAValidation("Hello World", publicKey);
-        System.out.println(ecdsaValidation.validate(sign));
+        //著名生成アルゴリズム指定
+        Signature ecdsa = Signature.getInstance("SHA256withECDSA");
+
+        //初期化
+        ecdsa.initSign(privateKey);
+
+        //著名生成
+        ecdsa.update(message.getBytes("UTF-8"));
+
+        //著名を取り出す
+        byte[] sign = ecdsa.sign();
+        System.out.println("Signature: " + new BigInteger(1, sign).toString(16));
+
+        // 初期化
+        ecdsa.initVerify(publicKey);
+
+        // 署名検証する対象をセットする
+        ecdsa.update(message.getBytes("UTF-8"));
+
+        // 署名検証
+        boolean verifyResult = ecdsa.verify(sign);
+        System.out.println("result: " + verifyResult);
+
     }
 }

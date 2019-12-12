@@ -27,8 +27,6 @@ public class ECDSAValidation{
         // 署名検証
         boolean verifyResult = ecdsa.verify(sign);
 
-        System.out.println("Verify: " + verifyResult);
-
         return verifyResult;
     }
 }

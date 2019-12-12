@@ -15,17 +15,7 @@ public class ECDSASignature{
         this.privateKey = privateKey;
     }
 
-    public byte[] signature() throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
-        BigInteger[] RS = new BigInteger[2];
-
-        //著名生成アルゴリズム指定
-        Signature ecdsa = Signature.getInstance("SHA256withECDSA");
-
-        //初期化
-        ecdsa.initSign(privateKey);
-
-        //著名生成
-        ecdsa.update(message.getBytes("UTF-8"));
+    public byte[] signature(Signature ecdsa) throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
 
         //著名を取り出す
         byte[] sign = ecdsa.sign();
