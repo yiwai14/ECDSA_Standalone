@@ -23,7 +23,7 @@ public class ECDSASignature{
         this.privateKey = privateKey;
     }
 
-    public BigInteger[] signature() throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
+    public byte[] signature() throws NoSuchAlgorithmException, InvalidKeyException, SignatureException, UnsupportedEncodingException {
         BigInteger[] RS = new BigInteger[2];
 
         //著名生成アルゴリズム指定
@@ -38,18 +38,8 @@ public class ECDSASignature{
         //著名を取り出す
         byte[] sign = ecdsa.sign();
 
-        System.out.println("Signature: " + DatatypeConverter.printHexBinary(sign));
+        System.out.println("Signature: " + new BigInteger(1, sign).toString(16));
 
-
-
-
-
-
-
-
-
-        return RS;
+        return sign;
     }
-
-    //BigInteger R_value = Yy;
 }
